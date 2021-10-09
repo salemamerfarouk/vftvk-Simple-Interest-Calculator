@@ -1,16 +1,42 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylecoursera.css">
+</head>
+<body style=" background: darkseagreen;">
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px;text-align: center;">Simple Interest Calculate</h1>
+    <div  style="text-align: center;border: 2px solid red;width: 50%; height: 400px;margin-left: 25%;background: darkslategray;">
+        <div style="padding-top: 20px;">
+        <label >Amont : </label><input id="num11" type="number" name="num1"><br><br><br><br>
+        <label>Rate  :  </label><input id="num12" type="number"  name="num2"><br><br><br><br>
+        <label>No. of Year : </label><input id="num13" type="number"  name="num3"><br><br><br><br>
+        <button onclick="gitvalue()" type="button">calculate</button>
+    </div>
+    </div>
+   <script>
+function gitvalue(){
+    var Amont=document.getElementById("num11").value;
+    var Rate=document.getElementById("num12").value;
+    var Year =document.getElementById("num13").value;
+    var cal=Amont *Rate*Year;
+    var calculat=cal /100;
+   // console.log(calculat);"If you deposid"
+   document.write("If you deposid"); document.write(Amont);
+   document.write("at an intersetrate of "); document.write(Rate);
+  
+   document.write("you will recive an amont of");document.write(calculat);
+   document.write("in the year");
+    document.write(Year);
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+  
 
-        <button onclick="compute()">Compute</button>
-    </body>
+}
+
+   </script>
+   
+</body>
 </html>
